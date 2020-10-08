@@ -14,6 +14,10 @@ Toby's Spring exercise
 - spring version은 gradle dependency로 설정하여 무관 (build.gradle 참고)
 - test 환경은 src/test 폴더에서 테스트 클래스 생성
 
+## 인텔리제이에서 프로젝트 환경 구성
+ - 열고자 하는 프로젝트를 open
+ - 프로젝트에서 마우스 우측 클릭 후 Import Gradle을 클릭
+
 ## 주의사항
 
 - 책과 버전이 다르기 때문에 코드의 작성내용이 다를 수도 있습니다.
