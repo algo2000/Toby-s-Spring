@@ -79,6 +79,7 @@ Toby's Spring exercise
 - [Spring Book 346](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook346)
 - [Spring Book 348](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook348)
 - [Spring Book 351](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook351)
+- [Spring Book 362](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook362)
 
 ## 주의사항
 
