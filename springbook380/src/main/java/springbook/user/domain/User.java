@@ -12,7 +12,7 @@ public class User
     int recommend;
 
     public User(){}
-    public User(String id,String name,String password,String eamil, Level level, int login, int recommend)
+    public User(String id,String name,String password,String email, Level level, int login, int recommend)
     {
         this.id = id;
         this.name = name;

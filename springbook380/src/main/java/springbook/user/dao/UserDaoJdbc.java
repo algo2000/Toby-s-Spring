@@ -35,7 +35,7 @@ public class UserDaoJdbc implements UserDao
     public void add(final User user) throws DuplicateUserIdException
     {
         this.jdbcTemplate.update("insert into USER (id,name,password,level, login, recommend, email)" +
-                " values (?,?,?,?,?,?);",user.getId(),user.getName(),user.getPassword(),
+                " values (?,?,?,?,?,?,?);",user.getId(),user.getName(),user.getPassword(),
                 user.getLevel().intValue(), user.getLogin(),user.getRecommend(),user.getEmail());
     }
 
@@ -63,7 +63,7 @@ public class UserDaoJdbc implements UserDao
         this.jdbcTemplate.update(
             "update USER set name = ?, password=?, level=?, login=?, recommend=?,email=? where id = ?",
                 user.getName(), user.getPassword(), user.getLevel().intValue(),user.getLogin(),
-                user.getRecommend(), user.getId(), user.getEmail());
+                user.getRecommend(), user.getEmail(), user.getId());
     }
 
     @Override
