@@ -88,6 +88,7 @@ Toby's Spring exercise
 - [Spring Book 396](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook396)
 6. AOP
 - [Spring Book 402](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook402)
+- [Spring Book 406](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook406)
 
 ## 주의사항
 
