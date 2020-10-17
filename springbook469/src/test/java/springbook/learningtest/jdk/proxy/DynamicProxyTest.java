@@ -35,11 +35,7 @@ public class DynamicProxyTest
         NameMatchMethodPointcut pointcut = new NameMatchMethodPointcut();
         pointcut.setMappedName("sayH*");
 
-        NameMatchMethodPointcut pointcut2 = new NameMatchMethodPointcut();
-        pointcut2.setMappedName("sayT*");
-
-        pfBean.addAdvice((Advice) new DefaultPointcutAdvisor(pointcut, new UppercaseAdvice()));
-        pfBean.addAdvice((Advice) new DefaultPointcutAdvisor(pointcut2, new UppercaseAdvice()));
+        pfBean.addAdvisor(new DefaultPointcutAdvisor(pointcut, new UppercaseAdvice()));
 
         Hello proxiedHello = (Hello)pfBean.getObject();
 
