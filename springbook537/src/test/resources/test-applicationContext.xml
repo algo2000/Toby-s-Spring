@@ -16,8 +16,6 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 
-    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
-
     <bean id="userService" class="springbook.user.service.UserServiceImpl">
         <property name="userDao" ref="userDao"/>
         <property name="mailSender" ref="mailsender"/>
@@ -26,10 +24,6 @@
     <!-- 트랜잭션 부가기능 -->
 
     <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <tx:method name="get*" read-only="true"/>
-            <tx:method name="*"/>   <!-- propagation="REQUIRED" 생략 가능 -->
-        </tx:attributes>
     </tx:advice>
 
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
