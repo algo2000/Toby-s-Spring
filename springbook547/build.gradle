@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group 'com.springbook'
+version '1.0.0'
+
+//버전 관리
+def version = [
+        spring: '5.2.9.RELEASE',
+        mysql: '8.0.21'
+]
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    compile group: 'org.mockito', name: 'mockito-core', version: '2.22.0'
+
+    compile group: 'mysql', name: 'mysql-connector-java', version: "${version.mysql}"
+
+    compile group: 'javax.mail', name: 'mail', version: '1.4.7'
+
+    compile group: 'org.springframework', name: 'spring-test', version: "${version.spring}"
+    compile group: 'org.springframework', name: 'spring-core', version: "${version.spring}"
+    compile group: 'org.springframework', name: 'spring-context', version: "${version.spring}"
+    compile group: 'org.springframework', name: 'spring-beans', version: "${version.spring}"
+    compile group: 'org.springframework', name: 'spring-expression', version: "${version.spring}"
+    compile group: 'org.springframework', name: 'spring-jdbc', version: "${version.spring}"
+    compile group: 'org.springframework', name: 'spring-context-support', version: "${version.spring}"
+    compile group: 'org.springframework', name: 'spring-aspects', version: "${version.spring}"
+}
