@@ -114,6 +114,8 @@ Toby's Spring exercise
 - [Spring Book 547](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook547)
 - [Spring Book 550](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook550)
 - [Spring Book 552](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook552)
+7. 스프링 핵심 기술의 응용
+- [Spring Book 559](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook559)
 
 ## 주의사항
 
