@@ -117,6 +117,7 @@ Toby's Spring exercise
 7. 스프링 핵심 기술의 응용
 - [Spring Book 559](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook559)
 - [Spring Book 561](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook561)
+- [Spring Book 563](https://github.com/algo2000/Toby-s-Spring/tree/master/springbook563)
 
 ## 주의사항
 
