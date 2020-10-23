@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/aop
+                           http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+                           http://www.springframework.org/schema/tx
+                           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                           ">
+
+
+    <bean id="userDao" class="springbook.user.dao.UserDaoJdbc">
+        <property name="dataSource" ref="dataSource"/>
+<!--        <property name="sqlAdd" value="insert into USER (id,name,password,level, login, recommend, email) values (?,?,?,?,?,?,?);"/>-->
+        <property name="sqlMap">
+            <map>
+                <entry key="add" value="insert into USER (id,name,password,level, login, recommend, email) values (?,?,?,?,?,?,?)"/>
+                <entry key="get" value="select * from User where id=?"/>
+                <entry key="getAll" value="select * from User order by id"/>
+                <entry key="deleteAll" value="delete from User"/>
+                <entry key="getCount" value="select count(*) from User"/>
+                <entry key="update" value="update USER set name = ?, password=?, level=?, login=?, recommend=?,email=? where id = ?"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="userService" class="springbook.user.service.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+        <property name="mailSender" ref="mailsender"/>
+    </bean>
+
+    <!-- 트랜잭션 부가기능 -->
+
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+    </tx:advice>
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <aop:config>
+        <aop:advisor advice-ref="transactionAdvice"
+                     pointcut="bean(*Service)"/>
+    </aop:config>
+
+    <!-- 트랜잭션 부가기능 -->
+
+    <!-- <bean id="mailsender" class="springbook.user.service.DummyMailSender"/> 로 대체 가능 -->
+    <bean id="mailsender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="smtp.gmail.com"/>
+        <property name="port" value="465"/>
+        <property name="username" value="test@gmail.com"/>    <!-- 자신이 사용할 메일 -->
+        <property name="password" value="1234"/>    <!-- 자신이 사용할 메일 비밀번-->
+        <property name="javaMailProperties">
+            <props>
+                <prop key="mail.smtp.com">true</prop>
+                <prop key="mail.smtp.ssl.enable">true</prop>
+                <prop key="mail.smtp.ssl.trust">smtp.gmail.com</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.SimpleDriverDataSource">
+        <property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/spring?serverTimezone=UTC"/>
+        <property name="username" value="root"/>
+        <property name="password" value="qwer1234@"/>
+    </bean>
+
+    <bean id="testUserService" class="springbook.user.service.UserServiceTest$TestUserService" parent="userService"/>
+</beans>
