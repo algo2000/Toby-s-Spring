@@ -126,6 +126,7 @@ Toby's Spring exercise
 1. IoC 컨테이너와 DI
 - [Spring Book Vol 2 053](https://github.com/algo2000/Toby-s-Spring/tree/master/springbookSecond053)
 - [Spring Book Vol 2 061](https://github.com/algo2000/Toby-s-Spring/tree/master/springbookSecond061)
+- [Spring Book Vol 2 069](https://github.com/algo2000/Toby-s-Spring/tree/master/springbookSecond069)
 
 ## 주의사항
 
