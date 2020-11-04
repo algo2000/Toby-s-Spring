@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------------
+    File   : Skeleton_Animation.css
+    Author : JongYoun, Lee 2020-10-28
+    CSS 적용순서 : 아이디 > 태그와 클래스 > 클래스 > 태그
+    CSS 선택자 선언순서 : Type Selector, Layout Selector, Class Selector, Etc
+    CSS 속성 선언순서 : display, position(top, right, bottom, left, z-index), float/clear, overflow, width/height, margin/padding(top, right, bottom, left),
+    border(top, right, bottom, left), background(image,position,repeat,color), border-radius, box-shadow,
+    font(font-weight, font-style, font-variant, font-size/line-height, font-family), opacity, cursor, box-sizing, etc
+-------------------------------------------------------------*/
+
+.skeleton-ui_animation01
+{
+    background: linear-gradient(to right, #e6e6e6, #c5c5c5, #e6e6e6);    
+    animation: gradient 3s ease infinite;
+    background-size: 400% 100%;
+}
+
+.skeleton-ui_animation02
+{
+    background: linear-gradient(-45deg, #ff7878, #76a6ff, #94ff8a);    
+    animation-name: gradient;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    background-size: 1000% 1000%;
+}
+
+@keyframes gradient 
+{
+    0% {background-position: 0% 0%;}
+    50% {background-position: 100% 0%;}
+    100% {background-position: 0% 0%;}
+}

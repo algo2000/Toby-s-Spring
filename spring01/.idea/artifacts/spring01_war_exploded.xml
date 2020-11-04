@@ -1,0 +1,39 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="spring01:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/spring01_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="spring01/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="spring01" />
+          <element id="module-output" name="spring01.main" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: commons-beanutils:commons-beanutils:1.8.0" />
+          <element id="library" level="project" name="Gradle: commons-digester:commons-digester:2.0" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-api:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-autotag-core-runtime:1.2" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-core:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-jsp:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-request-api:1.0.7" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-request-jsp:1.0.7" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-request-servlet:1.0.7" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-servlet:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tiles:tiles-template:3.0.8" />
+          <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-api:9.0.36" />
+          <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-servlet-api:9.0.36" />
+          <element id="library" level="project" name="Gradle: org.slf4j:jcl-over-slf4j:1.7.6" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:1.7.25" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
