@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="spring02:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/spring02_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="spring03.main" />
+          <element id="module-output" name="spring03" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.springframework:spring-aop:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-beans:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-context:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-core:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-expression:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-jcl:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-web:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-webmvc:5.2.9.RELEASE" />
+          <element id="library" level="project" name="Gradle: org.springframework:spring-test:5.2.9.RELEASE" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="spring03/web/Web" />
+      <element id="javaee-facet-resources" facet="spring03/web/Web" />
+    </root>
+  </artifact>
+</component>
