@@ -8,9 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta html-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
     <title>$Title$</title>
+    <script type="module" src="${pageContext.request.contextPath}/static/js/index/init.js"></script>
+    <link href="${pageContext.request.contextPath}/static/css/index/init.css" rel="stylesheet">
   </head>
   <body>
+    <div id="js"></div>
     인덱스 홈 ${message}
   </body>
 </html>

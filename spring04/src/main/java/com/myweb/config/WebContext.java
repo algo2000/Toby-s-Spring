@@ -22,6 +22,6 @@ public class WebContext implements WebMvcConfigurer
     {
         // Static 경로 설정
         WebMvcConfigurer.super.addResourceHandlers(registry);
-        registry.addResourceHandler("/**").addResourceLocations("/static/");
+        registry.addResourceHandler("/static/**").addResourceLocations("/static/");
     }
 }
